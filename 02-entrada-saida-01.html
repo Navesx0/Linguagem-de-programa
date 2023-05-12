@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> Soma dois numeros</h3>
+</body>
+
+<script>
+    /*
+    O programa pede ao usuario dois numeros inteiros e apresenta a soma
+    */
+
+    let num1, num2, soma
+
+    /*
+    Solicita a digitacao de um numero inteiro e converte em string para numero
+    */
+
+    num1 = parseFloat(prompt('informe o primeiro número: '))
+
+    num2 = parseFloat(prompt('informe o segundo número: '))
+
+    if (isNaN(num1)) {
+        alert('O Priemiro número é inválido!')
+    } else if (isNaN(num2)) {
+        alert('O segundo número é inválido')
+    } else {
+
+        soma = num1 + num2
+
+        document.write('A soma dos numeros é: ' + soma)
+        console.log(soma)
+    }
+</script>
+
+</html>
