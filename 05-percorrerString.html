@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h2><p style = "text-align: center;">Percorrer String</p></h2>
+    <hr>
+
+</body>
+<script>
+    let cadeia
+    document.write('Percorrer String de Caracteres <br>')
+    console.log('Percorrer String de Caracteres')
+
+    cadeia = prompt('Informe uma cadeia de caracteres')
+    document.write('Cadeia Informada: ', cadeia, '<br>')
+    console.log('Cadeia Informada: ', cadeia)
+
+    percorrerString(cadeia)
+
+    /*
+        Funções usadas no programa
+    */
+
+   function percorrerString(dado) {
+    let comprimento, contador
+    comprimento = dado.length
+    console.log('<br>Comprimento: ', comprimento)
+
+    for(contador = 0; contador < comprimento; contador++){
+        document.write(dado.substr(contador,1)+' - ')
+        console.log(dado.substr(contador,1))
+    }
+   }
+</script>
+</html>
