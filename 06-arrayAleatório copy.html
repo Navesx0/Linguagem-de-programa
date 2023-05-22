@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            text-align: center;
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Calcular média de 4 notas</h2>
+        <h3>20 de Maio de 2023</h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let contador, aleatorio
+    let cadeia = []
+
+    document.write('Array Aleatório <br>')
+    console.log('Array Aleatório')
+
+    console.log('cadeia: ', cadeia)
+
+    for (contador = 0; contador <= 5; contador++) {
+        aleatorio = Math.floor(Math.random() * 8)
+
+        if (cadeia.indexOf(aleatorio) === -1) { //
+            cadeia.push(aleatorio)
+            document.write('<br>Cadeia: ', cadeia)
+            console.log('Cadeia: ', cadeia)
+        }
+    }
+</script>
+</html>

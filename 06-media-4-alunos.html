@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            text-align: center;
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Calcular média de 4 notas</h2>
+        <h3>20 de Maio de 2023</h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let nota, somanotas, contador, qtdenotas
+    somanotas = 0
+    document.write('Calcular média de 4 Notas <br>')
+    console.log('Calcular média de 4 Notas <br>')
+    qtdenotas = parseInt(prompt('Informe a Quantidade de Notas'))
+    
+    for(contador = 0; contador < qtdenotas; contador++) {
+    /*for(contador = 0; contador < 4; contador++) { */    
+        nota = Math.floor((Math.random( )* 10)) /*O neto ensinou como  nota = Math.floor((Math.random( ) * 10))*/
+        //nota = Number(prompt('Informe a Nota:'))
+        somanotas += nota
+        document.write('Nota informada: ', nota + ' - ' + contador + '<br>')
+        console.log('Nota informada: ', nota + ' Soma ' + somanotas + ' - ' + contador + '<br>')
+    }
+
+    media = somanotas / 4
+    document.write("Média Final: " + media)
+    console.log("Média Final: " + media)
+</script>
+</html>
