@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h3>Calculadora 4 operacoes</h3>
+
+
+</body>
+<script>
+    let valor1, valor2, operacao
+
+    document.write('Calculadora 4 operaçoes Usando Funçoes (sub-rotinas)<br><br>')
+
+    operacao = prompt('\nInforme a Operaçao Desejada: (+) (-) (*) (/)')
+    valor1 = parseFloat(prompt("Informe o primeiro número: \n"))
+    valor2 = parseFloat(prompt("Informe o segundo número:\n"))
+
+    document.write(`O primeiro número é: ${valor1}<br><br>`)
+    document.write(`O primeiro número é: ${valor2}`)
+    
+    processar(operacao, valor1, valor2)
+    /*
+        INÍCIO DO BLOCO DE FUNÇOES
+    */
+
+   function processar(tipo, nro1, nro2){
+        switch (tipo){
+            case'+':
+            somar(nro1, nro2)
+            break
+            case'-':
+            subtrair(nro1, nro2)
+            break
+            case'*':
+            multiplicar(nro1, nro2)
+            break
+            case'/':
+            dividir(nro1, nro2)
+            break
+            default:
+                document.write('Operaçao Desconhecida')
+                console.log('Operaçao Desconhecida')
+        }
+    }
+
+    function somar(dado1, dado2){
+        let resultado
+        document.write('<br>O resultado de Soma<br>')
+        console.log('<br>O resultado de Soma<br>')
+        resultado = dado1 + dado2
+        document.write(`O resultado da soma é: ${resultado}`)
+        console.log(`O resultado da soma é: ${resultado}`)
+   }   
+   function subtrair(dado1, dado2){
+        let resultado
+        document.writelog('<br>O resultado de subtraçao<br>')
+        console.log('<br>O resultado de subtraçao<br>')
+        resultado = dado1 - dado2
+        document.write(`O resultado da subtraçao é: ${resultado}`)
+        console.log(`O resultado da subtraçao é: ${resultado}`)
+   }
+   function multiplicar(dado1, dado2){
+        let resultado
+        document.write('<br>O resultado de multiplicaçao<br>')
+        console.log('<br>O resultado de multiplicaçao<br>')
+        resultado = dado1 * dado2
+        document.write(`O resultado da multiplicaçao é: ${resultado}`)
+        console.log(`O resultado da multiplicaçao é: ${resultado}`)
+   }
+   function dividir(dado1, dado2){
+        let resultado
+        document.write('<br>O resultado de divisao<br>')
+        console.log('<br>O resultado de divisao<br>')
+        resultado = dado1 / dado2
+        document.write(`O resultado da divisao é: ${resultado}`)
+        console.log(`O resultado da divisao é: ${resultado}`)
+   }
+</script>
+</html>

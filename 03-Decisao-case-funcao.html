@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decisao Case</title>
+</head>
+<body>
+    <h3>Estrutura de decisao com case</h3>
+
+</body>
+
+<script>   
+    /*
+    O programa receberá um número e escreverá/mostrará o dia da semana correspondente
+    */
+    
+    let dia
+    
+    document.write('<br> teste de decisao com if Else <br>')
+    
+    dia = parseFloat(prompt('informe o dia da semana desejado'))
+
+    switch(dia) {
+    case 1:
+        diaSemana('Segunda-Feira')
+    break
+    case 2:
+        diaSemana('Terça-Feira')
+    break
+    case 3:
+        diaSemana('Quarta-Feira')
+    break
+    case 4:
+        diaSemana('Quinta-Feira')
+    break
+    case 5:
+        diaSemana('Sexta-Feira')
+    break
+    case 6:
+        diaSemana('Sábado')
+    break
+    case 7:
+        diaSemana('Domingo')
+    break
+    default:
+        diaSemana('[ERRO] Dia inválido')
+    break
+}
+
+function diaSemana( mensagem){
+document.write(mensagem)
+console.log(mensagem)
+}
+</script>    
+</html>
