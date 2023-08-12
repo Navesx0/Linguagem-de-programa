@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - 05</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funçoes - Lote 01 - Exercício 5<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+            <hr>
+    </header>
+</body>
+<script>
+    let num1, num2, num3
+    document.write('Ordem decrescente com três números. <br>')
+    num1 = parseFloat(prompt('Digite o primeiro número: '))
+    console.log('Digite o primeiro número: ')
+    num2 = parseFloat(prompt('Digite o segundo número: '))
+    console.log('Digite o segundo número: ')
+    num3 = parseFloat(prompt('Digite o terceiro número: '))
+    console.log('Digite o terceiro número: ')
+
+    document.write('<br>O primeiro número digitado é: ', num1)
+    console.log('O primeiro número digitado é: ', num1)
+    document.write('<br>O segundo número digitado é: ', num2)
+    console.log('O segundo número digitado é: ', num2)
+    document.write('<br>O terceiro número digitado é: ', num3)
+    console.log('O terceiro número digitado é: ', num3)
+
+
+    verificar(num1, num2, num3)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function verificar(num1, num2, num3) {
+
+        if (num1 >= num2 && num1 >= num3) {
+            if (num2 >= num3) {
+                document.write(`<br><br> O mair número digitado é: ${num1}. <br> O segundo maior número digitado é: ${num2}. <br> O menor número digitado é: ${num3}.`)
+                console.log(`O mair número digitado é: ${num1}. <br> O segundo maior número digitado é: ${num2}. <br> O menor número digitado é: ${num3}.`)
+            } else {
+                document.write(`<br><br> O mair número digitado é: ${num1}. <br> O segundo maior número digitado é: ${num3}. <br> O menor número digitado é: ${num2}.`)
+                console.log(`O mair número digitado é: ${num1}. <br> O segundo maior número digitado é: ${num3}. <br> O menor número digitado é: ${num2}.`)
+            }
+        } else if (num2 >= num1 && num2 >= num3) {
+            if (num1 >= num3) {
+                document.write(`<br><br> O mair número digitado é: ${num2}. <br> O segundo maior número digitado é: ${num1}. <br> O menor número digitado é: ${num3}.`)
+                console.log(`O mair número digitado é: ${num2}. <br> O segundo maior número digitado é: ${num1}. <br> O menor número digitado é: ${num3}.`)
+            } else {
+                document.write(`<br><br> O mair número digitado é: ${num2}. <br> O segundo maior número digitado é: ${num3}. <br> O menor número digitado é: ${num1}.`)
+                console.log(`O mair número digitado é: ${num2}. <br> O segundo maior número digitado é: ${num3}. <br> O menor número digitado é: ${num1}.`)
+            }
+        } else {
+            if (num1 >= num2) {
+                document.write(`<br><br> O mair número digitado é: ${num3}. <br> O segundo maior número digitado é: ${num1}. <br> O menor número digitado é: ${num2}.`)
+                console.log(`O mair número digitado é: ${num3}. <br> O segundo maior número digitado é: ${num1}. <br> O menor número digitado é: ${num2}.`)
+            } else {
+                document.write(`<br><br> O mair número digitado é: ${num3}. <br> O segundo maior número digitado é: ${num2}. <br> O menor número digitado é: ${num1}.`)
+                console.log(`O mair número digitado é: ${num3}. <br> O segundo maior número digitado é: ${num2}. <br> O menor número digitado é: ${num1}.`)
+            }
+        }
+
+    }
+</script>
+
+</html>

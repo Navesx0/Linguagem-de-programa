@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - 01</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funçoes - Lote 01 - Exercícios 1<br>
+        Disciplina Linguagem de Programaçao <br>
+        Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let valor1, valor2
+    document.write('Maior Entre Dois Números <br>')
+
+    valor1 = parseFloat(prompt('Digite o primeiro valor: '))
+    valor2 = parseFloat(prompt('Digite o segundo valor: '))
+
+    document.write('<br>Primeiro número: ', valor1)
+    console.log('Primeiro número: ', valor1)
+    document.write('<br>Primeiro número: ', valor2)
+    console.log('Segundo número: ', valor2)
+    calcular(valor1, valor2)
+
+    /*
+        Funçoes do projeto
+    */
+
+   function calcular(v1, v2){
+    if (v1 == v2){
+        document.write('Os números sao iguais <br>')
+        console.log('Os números sao iguais <br>')
+    } else if (v1 > v2) {
+        document.write('<br><br>O primeiro núero é maior que o segundo')
+        console.log('O primeiro núero é maior que o segundo')
+    } else {
+        document.write('<br><br>O segundo número é maior que o primerio')
+        console.log('O segundo número é maior que o primerio')
+    }
+   }
+</script>
+
+</html>

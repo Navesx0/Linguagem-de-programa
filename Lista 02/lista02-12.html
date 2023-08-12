@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - 12</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 12<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let salario, porcaumento
+    document.write('Calcula o Novo salário <br>')
+
+    salario = Number(prompt('Digite o valor do salário: '))
+    document.write('<br>Salário digitado: ', salario)
+    console.log('Salário digitado: ', salario)
+
+    porcaumento = Number(prompt('Digite a porcentagem do aumento '))
+    document.write('<br>Salário digitado: ', porcaumento)
+    console.log('Salário digitado: ', porcaumento)
+
+    calcular(salario, porcaumento)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(sal, porcaumento) {
+        let novosalario, valor
+
+        novosalario = sal * (1 + (porcaumento / 100))
+        valor = sal * (porcaumento / 100)
+
+        document.write('<br>O salário antes do reajuste era: ', sal.toFixed(2))
+        console.log('O salário antes do reajuste era: ', sal.toFixed(2))
+        document.write('<br>O percentual de aumento aplicado foi de: ', porcaumento, '%')
+        console.log('O percentual de aumento aplicado foi de: ', porcaumento, '%')
+        document.write('<br>O valor do aumento foi de: ', valor.toFixed(2))
+        console.log('O valor do aumento foi de: ', valor.toFixed(2))
+        document.write('<br><br>O valor do novo salário é: ', novosalario.toFixed(2))
+        console.log('O valor do novo salário é: ', novosalario.toFixed(2))
+    }
+</script>
+
+</html>

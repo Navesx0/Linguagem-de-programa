@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 15</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 15<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let lado
+    document.write('Calcula a área de um quadrado <br>')
+
+    lado = Number(prompt('Digite o tamanho do lado do quadrado.'))
+    document.write('<br><br>O tamanho do lado digitado é: ', lado.toFixed(2))
+    console.log('O tamanho do lado digitado é: ', lado.toFixed(2))
+
+
+    calcular(lado)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(lado) {
+        let area
+
+        area = lado * lado
+
+        document.write('<br><br>A área do quadrado é: ', area.toFixed(2))
+        console.log('A área do quadrado é: ', area.toFixed(2))
+    }
+</script>
+
+</html>

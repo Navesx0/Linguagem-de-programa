@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 19</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 19<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let precofabrica, perclucro, percimposto
+    document.write('Calcula o valor do veiculo com o lucro e o imposto.<br>')
+
+    precofabrica = Number(prompt('Digite o preço de fábrica do veículo.'))
+    perclucro = Number(prompt('Digite o percentual de lucro do distribuidor.'))
+    percimposto = Number(prompt('Digite o percentual de imposto.'))
+
+    document.write(`O preço de fábrica é ${precofabrica} <br>`)
+    console.log(`O preço de fábrica é ${precofabrica}`)
+    document.write(`O percentual de lucro do distribuidor é ${perclucro}% <br>`)
+    console.log(`O percentual de lucro do distribuidor é ${perclucro}% <br>`)
+    document.write(`O percentual de imposto é ${percimposto}% <br>`)
+    console.log(`O percentual de imposto é ${percimposto}% <br>`)
+
+    calcular(precofabrica, perclucro, percimposto)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(precofabrica, perclucro, percimposto) {
+        let total = precofabrica + (precofabrica * ((percimposto + perclucro) / 100))
+        document.write('<br>O valor correspondente ao lucro do distribuidor é: ', (precofabrica * (perclucro / 100)).toFixed(2))
+        console.log('O valor correspondente ao lucro do distribuidor é: ', (precofabrica * (perclucro / 100)).toFixed(2))
+
+        document.write('<br>O valor correspondente ao imposto é: ', (precofabrica * (percimposto / 100)).toFixed(2))
+        console.log('O valor correspondente ao imposto é: ', (precofabrica * (percimposto / 100)).toFixed(2))
+
+        document.write(`<br><br>O preço final do veículo é: ${total.toFixed(2)}`)
+        console.log('O preço final do veículo é: ', (total.toFixed(2)))
+    }
+</script>
+
+</html>

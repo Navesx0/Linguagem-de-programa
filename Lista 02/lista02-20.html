@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 20</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 20<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let salario, conta1, conta2
+    document.write('Calcula o restante do salario.<br>')
+
+    salario = Number(prompt('Digite o valor do salário de João.'))
+    conta1 = Number(prompt('Digite o valor da primeira conta.'))
+    conta2 = Number(prompt('Digite o valor da segunda conta.'))
+
+    document.write(`O valor do salário de João é: R$${salario} <br>`)
+    console.log(`O valor do salário de João é: R$${salario}`)
+    document.write(`O valor da primeira conta é: R$${conta1}<br>`)
+    console.log(`O valor da primeira conta é: R$${conta1}<br>`)
+    document.write(`O valor da segunda conta é: R$${conta2} <br>`)
+    console.log(`O valor da segunda conta é: R$${conta2}<br>`)
+
+    calcular(salario, conta1, conta2)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(sal, c1, c2) {
+        let resto, multa1, multa2
+
+        c1 += c1 * 0.02
+        c2 += c2 * 0.02
+
+        document.write('<br>O valor a ser pago com multa da primeira conta é: R$', c1.toFixed(2))
+        console.log('O valor a ser pago com multa da primeira conta é: R$', c1.toFixed(2))
+
+        document.write('<br>O valor a ser pago com multa da segunda conta é: ', c2.toFixed(2))
+        console.log('O valor a ser pago com multa da segunda conta é: R$', c2.toFixed(2))
+
+        document.write('<br><br>O restante do salário de João é: R$', (sal - c1 - c2).toFixed(2))
+        console.log('O restante do salário de João é: R$', (sal - c1 - c2).toFixed(2))
+    }
+</script>
+
+</html>

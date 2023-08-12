@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 21</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<header>
+    <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 21<br>
+        Disciplina Linguagem de Programaçao <br>
+        Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+    <hr>
+</header>
+
+<body>
+    <section>
+        <div id="texto">
+            Recebe a idade de 10 pessoas e calcula.<br>
+        </div>
+    </section>
+    <input type="button" value="Verificar" onclick="verificar(media)">
+    <div id='res'></div>
+</body>
+
+<script>
+    let media = 0 // Variável para armazenar a média das idades
+
+    for (let contador = 1; contador <= 10; contador++) {
+        const input = document.createElement("input") // Cria um elemento de input
+        input.type = "number" // Define o tipo do input como "number"
+        input.name = "idade" + contador // Define o nome do input com base no contador
+        input.id = "idade" + contador // Define o ID do input com base no contador
+        input.min = "0" // Define o valor mínimo para o input como 0
+
+        const label = document.createElement("label") // Cria um elemento de label
+        label.textContent = `Pessoa ${contador}: ` // Define o texto do label com base no contador
+        label.appendChild(input) // Adiciona o input como filho do label
+
+        document.querySelector('section').appendChild(label) // Obtém o elemento 'section' e adiciona o label como filho
+        document.querySelector('section').appendChild(document.createElement("br")) // Adiciona uma quebra de linha após o label
+        media += Number(input.value) // Adiciona o valor do input à variável 'media' (atualmente o valor é 0, então isso não afeta o resultado)
+    }
+
+    // Função para calcular a média das idades
+    function verificar() {
+        let soma = 0 // Variável para armazenar a soma das idades
+        let idade10 = 0, idade18 = 0, idade30 = 0, idade50 = 0, idade100 = 0 // Variáveis para contar o número de pessoas em diferentes faixas etárias
+
+        for (let contador = 1; contador <= 10; contador++) {
+            const input = document.getElementById("idade" + contador) // Obtém o input com base no ID
+            soma += Number(input.value) // Adiciona o valor do input à variável 'soma'
+            console.log('O total da soma das idades é:', soma)
+        }
+
+        media = soma / 10 // Calcula a média das idades dividindo a soma pelo número de pessoas (10)
+        console.log('A média das idades é :', media)
+        for (let contador = 1; contador <= 10; contador++) {
+            const input = document.getElementById("idade" + contador) // Obtém o input com base no ID
+
+            if (input.value <= 10) {
+                idade10 += 1 // Incrementa o contador para a faixa etária de 0 a 10 anos
+            } else if (input.value <= 18) {
+                idade18 += 1 // Incrementa o contador para a faixa etária de 11 a 18 anos
+            } else if (input.value <= 30) {
+                idade30 += 1 // Incrementa o contador para a faixa etária de 19 a 30 anos
+            } else if (input.value <= 50) {
+                idade50 += 1 // Incrementa o contador para a faixa etária de 30 a 50 anos
+            } else {
+                idade100 += 1 // Incrementa o contador para a faixa etária com mais de 50 anos
+            }
+        }
+
+        const res = document.getElementById("res") // Obtém o elemento com o ID "res"
+
+        // Define o conteúdo HTML do elemento "res" com os resultados
+        res.innerHTML = `A média de idade das pessoas é: ${media}<br>`
+        console.log(`A média de idade das pessoas é: ${media}`)
+        res.innerHTML += `A quantidade de pessoas com a faixa etária de 0 a 10 anos é: ${idade10}<br>`
+        console.log(`A quantidade de pessoas com a faixa etária de 0 a 10 anos é: ${idade10}`)
+        res.innerHTML += `A quantidade de pessoas com a faixa etária de 11 a 18 anos é: ${idade18}<br>`
+        console.log(`A quantidade de pessoas com a faixa etária de 11 a 18 anos é: ${idade18}`)
+        res.innerHTML += `A quantidade de pessoas com a faixa etária de 19 a 30 anos é: ${idade30}<br>`
+        console.log(`A quantidade de pessoas com a faixa etária de 19 a 30 anos é: ${idade30}`)
+        res.innerHTML += `A quantidade de pessoas com a faixa etária de 30 a 50 anos é: ${idade50}<br>`
+        console.log(`A quantidade de pessoas com a faixa etária de 30 a 50 anos é: ${idade50}`)
+        res.innerHTML += `A quantidade de pessoas com a faixa etária com mais de 50 anos é: ${idade100}`
+        console.log(`A quantidade de pessoas com a faixa etária com mais de 50 anos é: ${idade100}`)
+    }
+</script>

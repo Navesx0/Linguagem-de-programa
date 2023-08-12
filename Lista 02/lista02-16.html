@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 16</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 16<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let peso, altura
+    document.write('Calcula a área de um quadrado <br>')
+
+    peso = Number(prompt('Digite o seu peso.'))
+    document.write('<br><br>O peso digitado é: ', peso.toFixed(2))
+    console.log('O peso digitado é: ', peso.toFixed(2))
+    altura = Number(prompt('Digite a altura.'))
+    document.write('<br><br>A altura digitada é: ', altura.toFixed(2))
+    console.log('A altura digitada é: ', altura.toFixed(2))
+
+    calcular(peso, altura)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(peso, altura) {
+        let imc
+
+        imc = peso / (altura ** 2)
+
+        document.write('<br><br>O IMC é: ', imc.toFixed(2))
+        console.log('O IMC é: ', imc.toFixed(2))
+    }
+</script>
+
+</html>

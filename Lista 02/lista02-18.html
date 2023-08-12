@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 18</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 18<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let salario
+    document.write('Calcula o valor do salário com gratificação e imposto.<br>')
+
+    salario = Number(prompt('Digite o valor do salário.'))
+    document.write(`O valor do salário digitado foi ${salario} <br>`)
+    console.log(`O valor do salário digitado foi ${salario}`)
+
+
+    calcular(salario)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(salario) {
+        let grat, imposto, sal
+
+        grat = 50
+        imposto = salario * 0.10
+        document.write('<br>O valor da gratificação é: ', grat.toFixed(2))
+        console.log('O valor da gratificação é: ', grat.toFixed(2))
+
+        document.write('<br>O salário com gratificação é: ', (salario + grat).toFixed(2))
+        console.log('O salário com gratificação é: ', (salario + grat).toFixed(2))
+        document.write('<br>O valor do imposto pago é: ', imposto.toFixed(2))
+        console.log('O valor do imposto pago é: ', imposto.toFixed(2))
+
+        document.write('<br><br>O valor a ser pago ao funciário é: ', (salario + grat - imposto).toFixed(2))
+        console.log('O valor a ser pago ao funciário é: ', (salario + grat - imposto).toFixed(2))
+    }
+</script>
+
+</html>

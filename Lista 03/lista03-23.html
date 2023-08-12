@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - 23</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 03 - Exercícios 23<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+
+<script>
+    document.write(`Recebe a nota de 10 alunos e calcula<br>`)
+    for (let contador = 1; contador <= 10; contador++) {
+        nota = parseInt(prompt(`Digite o valor da ${contador}° nota: `))
+        document.write(`<br>Nota ${contador} = ${nota}<br>`)
+        console.log(`Nota ${contador} = ${nota}`)
+        for (let cont = 0; cont < nota; cont++) {
+            document.write(`*`)
+            console.log(`*`)
+        }
+    }
+</script>
+
+</html>

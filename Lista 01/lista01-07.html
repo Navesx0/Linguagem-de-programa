@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - 07</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funçoes - Lote 01 - Exercício 7<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let nota1, nota2
+    document.write('Média do Aluno. <br>')
+    nota1 = parseFloat(prompt('Digite a primeira nota: '))
+    nota2 = parseFloat(prompt('Digite a segunda nota: '))
+
+    document.write('<br><br>A primeira nota foi: ', nota1)
+    console.log('A primeira nota foi: ', nota1)
+    document.write('<br><br>A segunda nota foi: ', nota2)
+    console.log('A segunda nota foi: ', nota2)
+
+    verificar(nota1, nota2)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function verificar(n1, n2) {
+        let media = ((n1 + n2) / 2)
+        console.log('média:', media)
+
+        if (media == 10) {
+            document.write(`<br><br>APROVADO COM DISTINÇÃO: ${media}`)
+            console.log(`APROVADO COM DISTINÇÃO: ${media}`)
+        } else if (media >= 7) {
+            document.write(`<br><br>APROVADO COM MÉDIA: ${media}`)
+            console.log(`APROVADO COM MÉDIA: ${media}`)
+        } else {
+            document.write(`<br><br>REPROVADO COM MÉDIA: ${media}`)
+            console.log(`REPROVADO COM MÉDIA: ${media}`)
+        }
+    }
+</script>
+
+</html>

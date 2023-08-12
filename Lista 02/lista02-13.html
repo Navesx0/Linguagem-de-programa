@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 13</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 13<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let num1, num2, num3
+    document.write('Recebe 3 números e calcula a média <br>')
+
+    num1 =  Number(prompt('Digite o primeiro número: '))
+    num2 =  Number(prompt('Digite o segundo número: '))
+    num3 =  Number(prompt('Digite o terceiro número: '))
+    document.write('<br>Primeiro número: ', num1)
+    console.log('Primeiro número: ', num1)
+    document.write('<br>Segundo número: ', num2)
+    console.log('Segundo número: ', num2)
+    document.write('<br>Terceiro número: ', num3)
+    console.log('Terceiro número: ', num3)
+
+    calcular(num1, num2, num3)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(n1,n2,n3) {
+        let media
+
+        media = (n1 + n2+ n3)/ 3
+        
+        document.write('<br><br>A média aritimética é: ', media.toFixed(2))
+        console.log('A média aritimética é: ', media.toFixed(2))
+    }
+</script>
+
+</html>

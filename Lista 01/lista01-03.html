@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - 03</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funçoes - Lote 01 - Exercício 3<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+            <hr>
+    </header>
+</body>
+<script>
+    let valor1
+    document.write('Par ou Impar <br>')
+    valor1 = parseFloat(prompt('Digite o número que deseja saber se é par ou impar: '))
+    console.log('Digite o número que deseja saber se é par ou impar: ')
+    document.write('<br>O número digitado é: ', valor1)
+    console.log('O número digitado é: ', valor1)
+    verificar(valor1)
+
+    /*
+        Funçoes do projeto
+    */
+
+        function verificar(v1) {
+        
+        if (v1 % 2 == 0) {
+            document.write('<br><br>O número é par. <br>')
+            console.log('O número é par.')
+        } else {
+            document.write('<br><br>O número é impar.')
+            console.log('O número é impar.')
+        }
+    }
+</script>
+
+</html>

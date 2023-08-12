@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - 08</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funçoes - Lote 01 - Exercício 8<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let produto1, produto2, produto3
+
+    document.write("Análise do produto mais barato<br>")
+
+    produto1 = parseFloat(prompt("Informe o Valor do Primeiro Produto:\n"))
+    produto2 = parseFloat(prompt("Informe o Valor do Segundo Produto:\n"))
+    produto3 = parseFloat(prompt("Informe o Valor do Terceiro Produto::\n"))
+
+    document.write(`<br><br>Produto 1 - valor: ${produto1}`)
+    console.log(`Produto 1 - valor: ${produto1}`)
+    document.write(`<br><br>Produto 2 - valor: ${produto2}`)
+    console.log(`Produto 2 - valor: ${produto2}`)
+    document.write(`<br><br>Produto 3 - valor: ${produto3}`)
+    console.log(`Produto 3 - valor: ${produto3}`)
+
+    verificar(produto1, produto2, produto3)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function verificar(v1, v2, v3) {
+        let minimo
+        minimo = Math.min(v1, v2, v3)
+        document.write(`<br><br>O produto a ser comprado é o de: ${minimo} reais`)
+        console.log(`O produto a ser comprado é o de: ${minimo} reais`)
+    }
+
+</script>
+
+</html>

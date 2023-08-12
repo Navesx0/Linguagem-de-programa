@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - 22</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 03 - Exercícios 22<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+    <section>
+        <h1>Calculadora de Vendas</h1>
+        Precione o botão para iniciar o código: <button onclick="calcularValores()">Calcular</button>
+        <br><br>
+        <h2>Resultados:</h2>
+        <p>Valor total das vendas à vista: <span id="valorvista"></span></p>
+        <p>Valor total das vendas a prazo: <span id="valorprazo"></span></p>
+        <p>Valor total das vendas: <span id="valortotal"></span></p>
+        <p>Valor da primeira prestação das vendas a prazo: <span id="primeiraprestacao"></span></p>
+    </section>
+</body>
+<script>
+    function calcularValores() {
+      let valorvista = 0, valorprazo = 0, valortotal = 0, primeiraprestacao = 0
+
+      for (let i = 1; i <= 10; i++) {
+        const codigo = prompt(`Informe o código da transação ${i}: (V para à vista, P para a prazo)`);
+        console.log(`O código da ${i} transação é: ${codigo}`)
+        const valor = parseFloat(prompt(`Informe o valor da transação ${i}:`));
+        console.log(`O valor da ${i} transação é: ${valor}`)
+
+        if (codigo === 'V') {
+          valorvista += valor;
+          console.log(`A soma das transações a vista até a ${i} transação é: ${valorvista}`)
+        } else if (codigo === 'P') {
+          valorprazo += valor;
+          console.log(`A soma das transações a prazo até a ${i} transação é: ${valorprazo}`)
+          primeiraprestacao += valor / 3;
+          console.log(`A soma das primeiras prestações a prazo até a ${i} transação é: ${primeiraprestacao}`)
+        }
+
+        valortotal += valor;
+      }
+
+      // Exibindo os resultados
+      document.getElementById('valorvista').textContent = valorvista.toFixed(2);
+      console.log(`Valor total das vendas à vista: ${valorvista.toFixed(2)}`)
+
+      document.getElementById('valorprazo').textContent = valorprazo.toFixed(2);
+      console.log(`Valor total das vendas a prazo: ${valorprazo.toFixed(2)}`)
+
+      document.getElementById('valortotal').textContent = valortotal.toFixed(2);
+      console.log(`Valor total das vendas: ${valortotal.toFixed(2)}`)
+
+      document.getElementById('primeiraprestacao').textContent = primeiraprestacao.toFixed(2);
+      console.log(`Valor da primeira prestação das vendas a prazo: ${primeiraprestacao.toFixed(2)}`)
+    }
+  </script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - 04</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funçoes - Lote 01 - Exercício 4<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+            <hr>
+    </header>
+</body>
+<script>
+    let num1, num2, num3
+    document.write('Maior e menor entre três números. <br>')
+    num1 = parseFloat(prompt('Digite o primeiro número: '))
+    console.log('Digite o primeiro número: ')
+    num2 = parseFloat(prompt('Digite o segundo número: '))
+    console.log('Digite o segundo número: ')
+    num3 = parseFloat(prompt('Digite o terceiro número: '))
+    console.log('Digite o terceiro número: ')
+    document.write('<br>O primeiro número digitado é: ', num1)
+    console.log('O primeiro número digitado é: ', num1)
+    document.write('<br>O segundo número digitado é: ', num2)
+    console.log('O segundo número digitado é: ', num2)
+    document.write('<br>O terceiro número digitado é: ', num3)
+    console.log('O terceiro número digitado é: ', num3)
+
+
+    verificar(num1, num2, num3)
+
+    /*
+        Funçoes do projeto
+    */
+
+        function verificar(n1, n2, n3) {
+        
+        let maior = n1
+        let menor = n1
+
+        if (n2 > maior) {
+            maior = n2
+        }
+        if (n3 > maior) {
+            maior = n3
+        }
+        if (n2 < menor) {
+            menor = n2
+        }
+        if (n3 < menor) {
+            menor = n3
+        }
+        document.write('<br><br>O maior número digitado é: ', maior)
+        console.log('O maior número digitado é: ', maior)
+        document.write('<br>O menor número digitado é: ', menor)
+        console.log('O menor número digitado é: ', menor)
+    }
+</script>
+
+</html>

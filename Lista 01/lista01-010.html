@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - 09</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funçoes - Lote 01 - Exercício 9<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+            <hr>
+    </header>
+</body>
+<script>
+    let mes
+
+    document.write('Mês do Ano por Extenso<br><br>')
+
+    mes = parseFloat(prompt('Informe o número do mês: '))
+
+    document.write('<br>Mês digitado: ', mes)
+    console.log('Mês digitado: ', mes)
+
+    verificar(mes)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function verificar (mes){
+       switch (mes){
+            case 1:
+                document.write("<br><br>Janeiro")
+                console.log("Janeiro")
+                break
+            case 2:
+                document.write("<br><br>Fevereiro")
+                console.log("Fevereiro")
+                break
+            case 3:
+                document.write("<br><br>Março")
+                console.log("Março")
+                break
+            case 4:
+                document.write("<br><br>Abril")
+                console.log("Abril")
+                break
+            case 5:
+                document.write("<br><br>Maio")
+                console.log("Maio")
+                break
+            case 6:
+                document.write("<br><br>Junho")
+                console.log("Junho")
+                break
+            case 7:
+                document.write("<br><br>Julho")
+                console.log("Julho")
+                break
+            case 8:
+                document.write("<br><br>Agosto")
+                console.log("Agosto")
+                break
+            case 9:
+                document.write("<br><br>Setembro")
+                console.log("Setembro")
+                break
+            case 10:
+                document.write("<br><br>Outubro")
+                console.log("Outubro")
+                break
+            case 11:
+                document.write("<br><br>Novembro")
+                console.log("Novembro")
+                break
+            case 12:
+                document.write("<br><br>Dezembro")
+                console.log("Dezembro")
+                break
+            default:
+                document.write("<br><br>[ERRO]Mês Inválido, fora do intervalo entre 1 e 12")
+                console.log("<br><br>[ERRO]Mês Inválido, fora do intervalo entre 1 e 12")
+                break
+        }
+    }
+</script>
+
+</html>

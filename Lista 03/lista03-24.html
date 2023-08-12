@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - 24</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 03 - Exercícios 24<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+
+<script>
+    let nome, not1, nota2, nota3, nota4
+    document.write('Recebe o nome e as notas e calcula a média<br>')
+    nome = prompt(`Digite o nome do aluno:`)
+
+    nota1 = parseFloat(prompt(`Digite o valor da 1° nota: `))
+    nota2 = parseFloat(prompt(`Digite o valor da 2° nota: `))
+    nota3 = parseFloat(prompt(`Digite o valor da 3° nota: `))
+    nota4 = parseFloat(prompt(`Digite o valor da 4° nota: `))
+
+    document.write(`A 1° Nota é: ${nota1}<br>`)
+    console.log(`A 1° Nota é: ${nota1}`)
+    document.write(`A 2° Nota é: ${nota2}<br>`)
+    console.log(`A 2° Nota é: ${nota2}`)
+    document.write(`A 3° Nota é: ${nota3}<br>`)
+    console.log(`A 3° Nota é: ${nota3}`)
+    document.write(`A 4° Nota é: ${nota4}<br>`)
+    console.log(`A 4° Nota é: ${nota4}`)
+
+    let media = calcular(nota1, nota2, nota3, nota4)
+
+    document.write(`A média é: ${media}<br>`)
+    console.log(`A média é: ${media}`)
+
+    if (media >= 7) {
+        document.write(`<br>Aprovado<br>`)
+        console.log(`Aprovado`)
+    } else {
+        document.write(`<br>Reprovado<br>`)
+        console.log(`Reprovado`)
+    }
+
+    /*
+    Funções do programa
+    */
+
+    function calcular(n1, n2, n3, n4) {
+        let media = (n1 + n2 + n3 + n4) / 4
+        return media
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 14</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 14<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let valorhora, horas
+    document.write('Calcula o valor do salário com as horas trabalhadas <br>')
+
+    valorhora = Number(prompt('Digite o valor da hora trabalhada.'))
+    horas = Number(prompt('Digite a quantidade de horas trabalhadas.'))
+    document.write(`O valor da hora trabalhada é ${valorhora} <br>`)
+    console.log(`O valor da hora trabalhada é ${valorhora}`)
+    document.write(`A quantidade de horas trabalhadas é: ${horas} <br>`)
+    console.log(`O valor da hora trabalhada é: ${horas}`)
+
+    calcular(valorhora, horas)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(valorhora, horas) {
+        let salario
+
+        salario = valorhora * horas
+
+        document.write('<br><br>O salário é: ', salario.toFixed(2))
+        console.log('O salário é: ', salario.toFixed(2))
+    }
+</script>
+
+</html>

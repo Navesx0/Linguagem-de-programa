@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - 11</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        header {
+            font: normal 25px Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Estrutura Elementares e Funções - Lote 02 - Exercícios 11<br>
+            Disciplina Linguagem de Programaçao <br>
+            Nome do Aluno: LEONARDO CARVALHO NAVES DE LIMA<br></h3>
+        <hr>
+    </header>
+</body>
+<script>
+    let salario
+    document.write('Calcula o Novo salário <br>')
+
+    salario = Number(prompt('Digite o valor do salário: '))
+
+    document.write('<br>Salário digitado: ', salario)
+    console.log('Salário digitado: ', salario)
+
+    calcular(salario)
+
+    /*
+        Funçoes do projeto
+    */
+
+    function calcular(sal) {
+        let porcaumento, novosalario, valor
+
+        porcaumento = 0.25
+        novosalario = sal * (1 + porcaumento)
+        valor = sal * porcaumento
+
+        document.write('<br>O salário antes do reajuste era: ', sal.toFixed(2))
+        console.log('O salário antes do reajuste era: ', sal.toFixed(2))
+        document.write('<br>O percentual de aumento aplicado foi de: ', porcaumento * 100, '%')
+        console.log('O percentual de aumento aplicado foi de: ', porcaumento * 100, '%')
+        document.write('<br>O valor do aumento foi de: ', valor.toFixed(2))
+        console.log('O valor do aumento foi de: ', valor.toFixed(2))
+        document.write('<br><br>O valor do novo salário é: ', novosalario.toFixed(2))
+        console.log('O valor do novo salário é: ', novosalario.toFixed(2))
+    }
+</script>
+
+</html>
